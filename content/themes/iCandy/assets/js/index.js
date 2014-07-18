@@ -193,7 +193,7 @@
         casperFullImg();
         $(window).smartresize(casperFullImg);
 
-        if ($('.post-content').length == 1){
+        if ($('.post-content').length == 1 && !$('#read-time').length){
             var pageText = $('.post-content').text().replace(/\r?\n/g,'');
 
             var read_time = function(text){
@@ -201,7 +201,7 @@
             if(minutes === 0) minutes = 1
             return minutes + ' min read'
             }
-            $('.post-meta').append(' <i style="margin-left: 10px;" class="fa fa-clock-o"></i> <span>'
+            $('.post-meta').append(' <i id="read-time" style="margin-left: 10px;" class="fa fa-clock-o"></i> <span>'
             + read_time(pageText) +'</span>');
         }
     });
