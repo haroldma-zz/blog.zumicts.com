@@ -193,6 +193,17 @@
         casperFullImg();
         $(window).smartresize(casperFullImg);
 
+        if ($('.post-content').length == 1){
+            var pageText = $('.post-content').text().replace(/\r?\n/g,'');
+
+            var read_time = function(text){
+            var minutes = Math.floor(text.split(' ').length / 200 )
+            if(minutes === 0) minutes = 1
+            return minutes + ' min read'
+            }
+            $('.post-meta').append(' <i style="margin-left: 10px;" class="fa fa-clock-o"></i> <span>'
+            + read_time(pageText) +'</span>');
+        }
     });
 
 }(jQuery));
