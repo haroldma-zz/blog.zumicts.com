@@ -1,11 +1,9 @@
 {{! Each post has the blog logo at the top, with a link back to the home page }}
 <header class="post-header fade-in one center">
   <a id="blog-logo" href="{{@blog.url}}">
-    {{#if @blog.logo}}
-    <img src="{{@blog.logo}}" alt="Blog Logo" />
-    {{else}}
-    {{@blog.title}}
-    {{/if}}
+    <i class="fa fa-laptop" style="
+    font-size: 150px;
+    color: #ccc;"></i>
   </a>
 
   {{!-- SOCIAL MEDIA LINKS --}}
