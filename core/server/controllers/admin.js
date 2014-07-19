@@ -7,6 +7,8 @@ var config        = require('../config'),
     errors        = require('../errorHandling'),
     storage       = require('../storage'),
     updateCheck   = require('../update-check'),
+    request       = require('request'),
+    fs            = require('fs'),
 
     adminNavbar,
     adminControllers,
@@ -148,15 +150,51 @@ adminControllers = {
             return res.send(415, 'Unsupported Media Type');
         }
 
-        store
-            .save(req.files.uploadimage)
-            .then(function (url) {
-                return res.send(url);
-            })
-            .otherwise(function (e) {
-                errors.logError(e);
-                return res.send(500, e.message);
-            });
+        if (type == 'image/jpeg' || type == 'image/png' || type || 'image/gif') {
+            function uploadToImgur(clientID, image) {
+        		var options = {
+        			url: 'https://api.imgur.com/3/upload.json',
+        			headers: {
+        				'Authorization': 'Client-ID ' + clientID
+        			}
+        		};
+        		var post = request.post(options, function (err, req, body) {
+        			if(err) {
+        				return res.send(500,err.message);
+        			}
+
+        			try {
+        				var response = JSON.parse(body);
+
+        				if(response.data.link) {
+        					return res.send(response.data.link);
+        				} else {
+        					return res.send(500, response.data.error.message);
+        				}
+        			} catch(e) {
+        				return res.send(500,'problem parsing imgur json');
+        			}
+        		});
+
+        		var upload = post.form();
+        		upload.append('type', 'file');
+        		upload.append('image', fs.createReadStream(image.path));
+        	}
+
+            uploadToImgur('df22298036f64df', req.files.uploadimage);
+        }
+
+        else{
+            store
+                .save(req.files.uploadimage)
+                .then(function (url) {
+                    return res.send(url);
+                })
+                .otherwise(function (e) {
+                    errors.logError(e);
+                    return res.send(500, e.message);
+                });
+            }
     },
     // Route: signout
     // Path: /ghost/signout/
