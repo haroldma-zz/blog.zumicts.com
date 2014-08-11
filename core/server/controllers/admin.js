@@ -167,7 +167,8 @@ adminControllers = {
         				var response = JSON.parse(body);
 
         				if(response.data.link) {
-        					return res.send(response.data.link);
+                            //always use a secure connection link
+        					return res.send(response.data.link.replace('http:', 'https:'));
         				} else {
         					return res.send(500, response.data.error.message);
         				}
