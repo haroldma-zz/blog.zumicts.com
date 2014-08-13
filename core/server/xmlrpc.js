@@ -1,6 +1,6 @@
 var _               = require('lodash'),
     config          = require('./config'),
-    errors          = require('./errors'),
+    errors          = require('./errorHandling'),
     http            = require('http'),
     xml             = require('xml'),
     pingList;
@@ -17,14 +17,6 @@ function ping(post) {
 
     // Only ping when in production and not a page
     if (process.env.NODE_ENV !== 'production' || post.page) {
-        return;
-    }
-
-    // Don't ping for the welcome to ghost post.
-    // This also handles the case where during ghost's first run
-    // models.init() inserts this post but permissions.init() hasn't
-    // (can't) run yet.
-    if (post.slug === 'welcome-to-ghost') {
         return;
     }
 

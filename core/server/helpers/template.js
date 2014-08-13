@@ -1,6 +1,6 @@
 var templates     = {},
     hbs           = require('express-hbs'),
-    errors        = require('../errors');
+    errors        = require('../errorHandling');
 
 // ## Template utils
 

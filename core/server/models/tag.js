@@ -1,4 +1,5 @@
-var ghostBookshelf = require('./base'),
+var Posts          = require('./post').Posts,
+    ghostBookshelf = require('./base'),
 
     Tag,
     Tags;
@@ -25,24 +26,17 @@ Tag = ghostBookshelf.Model.extend({
     },
 
     posts: function () {
-        return this.belongsToMany('Post');
-    },
-
-    toJSON: function (options) {
-        var attrs = ghostBookshelf.Model.prototype.toJSON.call(this, options);
-
-        attrs.parent = attrs.parent || attrs.parent_id;
-        delete attrs.parent_id;
-
-        return attrs;
+        return this.belongsToMany(Posts);
     }
 });
 
 Tags = ghostBookshelf.Collection.extend({
+
     model: Tag
+
 });
 
 module.exports = {
-    Tag: ghostBookshelf.model('Tag', Tag),
-    Tags: ghostBookshelf.collection('Tags', Tags)
+    Tag: Tag,
+    Tags: Tags
 };
