@@ -1,0 +1,24 @@
+/*
+DISEÑADOR WEB
+	 Diseñador web: Iván Barcia
+	 Sitio web: www.ivanbarcia.eu
+	 Contacto: contacto@ivanbarcia.eu
+	 Hecho en: Galicia, España
+	 
+INFORMACIÓN DE LA PÁGINA
+	Tema: Now Cards Web
+	Versión: 3.0
+	Plataforma: GHOST
+	Licencia: MIT License
+*/
+
+
+
+
+
+/*No escribas ni modifiques aquí código CSS. Escríbelo en "custom.css"*/
+/* Do not write or modify CSS code here. Write it in "custom.css" */
+
+@import url(style-default.css);
+@import url(style-cms.css);
+@import url(custom.css);

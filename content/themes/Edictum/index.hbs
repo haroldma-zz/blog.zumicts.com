@@ -1,0 +1,25 @@
+{{!< default}}
+
+<header>
+    <div class="imagen-autor" style="background-image: url({{@blog.logo}})"></div>
+    <h5>{{@blog.title}}</h5>
+    <h6>{{@blog.description}}</h6>
+</header>
+
+<main>
+    {{#foreach posts}}
+
+    <article>
+        <small class="fecha">{{date format="dddd ,DD MMMM, YYYY"}}</small>
+        <h1 class="titulo-articulo">{{{title}}}</h1>
+        <h2 class="subtitulo-articulo">{{excerpt}}</h2>
+
+        <div class="texto">
+            {{content}}
+        </div>
+    </article>
+
+    {{/foreach}}
+
+    <div class="pagination p-ghost">{{pagination}}</div> 
+</main>

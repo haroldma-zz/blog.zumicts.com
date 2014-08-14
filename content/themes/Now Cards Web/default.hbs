@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<!--
+DISEÑADOR WEB
+    Diseñador web: Iván Barcia
+    Sitio web: www.ivanbarcia.eu
+    Contacto: contacto[at]Ivanbarcia.eu
+    Hecho en: Galicia, España
+     
+INFORMACIÓN DE LA PÁGINA
+    Tema: Now Cards Web
+    Versión: 3.0
+    Plataforma: Ghost
+ -->
+ 
+ <html>
+    <head>
+    {{! Page Meta }}
+    <meta charset="utf-8">
+    <title>{{meta_title}}</title>
+    <meta name="description" content="{{meta_description}}" />
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    {{! Styles'n'Scripts }}
+    <link rel="shortcut icon" href="{{asset "favicon.ico"}}" />
+    <link rel="stylesheet" type="text/css" href="{{asset "css/screen.css"}}" />
+    
+
+    {{!  Prettify }}
+    <link type="text/css" rel="stylesheet"  href="{{asset "css/prettify.css"}}"  />
+    <script type="text/javascript" src="{{asset "js/prettify.js"}}"></script>
+    <script type="text/javascript" src="{{asset "js/lang-css.js"}}"></script>
+
+
+    {{ghost_head}}
+</head>
+
+<body>
+
+    {{{body}}}
+
+    <footer>
+
+        <div>
+            <a href="/">{{@blog.title}}</a> &copy; 2014 &bull; All rights reserved |
+            <a href="{{@blog.url}}/rss/">RSS</a>
+        </div>
+
+        <div>
+            Proudly published with <a href="http://ghost.org">Ghost</a> and designed by <a href="http://www.ivanbarcia.eu">Iván Barcia</a>
+        </div>
+
+    </footer>
+
+    {{ghost_foot}}
+
+</body>
+</html>

@@ -1,0 +1,356 @@
+
+
+@import url(http://fonts.googleapis.com/css?family=Roboto:100,100italic,300,400,400italic,500italic,700,500,700italic,900,900italic);
+@import "assets/font-awesome.min.css";
+@import "assets/normalize.css";
+/**********************************************
+                   BASICO 
+ **********************************************/
+
+* {
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  cursor: default;
+  font-family: 'Roboto', sans-serif;
+  /*Fuente del texto*/
+
+}
+html,
+body {
+  height: 100%;
+  max-width: 1366px;
+  /*Ancho máximo que puede tener la página web*/
+
+}
+/**********************************************
+                   TIPOGRAFIA 
+ **********************************************/
+
+ul {
+  list-style: square;
+  /*Éste es el icono que se ve antes de cada ítem de una lista. Puedes cambiarlo por 'none' para eliminarlo o 'default' para poner un circulo*/
+
+}
+ul,
+ol {
+  list-style-position: inside;
+  text-align: left;
+}
+body {
+  color: #707070;
+  /*Color del texto*/
+  background-color: #eeeeee;
+  /*Color de fondo de la página*/
+
+}
+a {
+  color: #e74c3c;
+  /*Color de texto de los enlaces*/
+
+}
+a:hover {
+  color: #ed7669;
+  /*Color de texto de los enlaces al pasar el ratón por encima*/
+  cursor: pointer;
+}
+p,
+ul,
+ol,
+code {
+  font-size: 1rem;
+  /*Tamaño de letra del texto*/
+  line-height: 1.5rem;
+  /*Separación entre líneas*/
+  font-weight: 300;
+  /*Grosor del texto*/
+  margin: 0px 0px 20px 0px;
+  text-align: left;
+}
+p:last-child,
+ul:last-child,
+ol:last-child,
+code:last-child {
+  margin: 0px;
+}
+p {
+  text-align: justify;
+}
+b,
+strong {
+  font-weight: 500;
+  /*Grosor del texto en negrita*/
+
+}
+ul ul,
+ol ol {
+  margin: 0px 0px 0px 20px;
+}
+ul ul ul,
+ol ol ol {
+  margin: 0px 0px 0px 20px;
+}
+h1 {
+  font-size: 4rem;
+  /*Tamaño de letra del título del blog*/
+  font-weight: 700;
+  /*Grosor de letra del título del blog*/
+  margin-top: 0px;
+}
+h2 {
+  font-size: 2rem;
+  /*Tamaño de letra de los títulos de cada tarjeta*/
+  font-weight: 500;
+  /*Grosor de letra de los títulos de cada tarjeta*/
+  padding: 0px 0px 30px 0px;
+}
+h3 {
+  font-size: 1.3rem;
+  /*Tamaño de letra de los títulos de cada párrafo*/
+  font-weight: 500;
+  /*Grosor de letra de los títulos de cada párrafo*/
+  padding: 10px 0px 10px 0px;
+  text-align: left;
+  letter-spacing: 0.5px;
+}
+/**********************************************
+                   HEADER 
+ **********************************************/
+
+header {
+  position: relative;
+  width: 100%;
+  /*height: 50%;*/
+  /*Alto de la portada*/
+  margin-bottom: 30px;
+  text-align: center;
+  color: white;
+  /*Color del texto de la portada*/
+  background: #eeeeee no-repeat center center;
+  background-size: cover;
+  background-image: url(../img/portada.jpg);
+  /*URL de la imagen de portada*/
+
+}
+header h1,
+header h2 {
+  text-align: center;
+  text-shadow: 0.06em 0.06em 0.04em #707070;
+  /*Configuración de la sombra del texto de la portada*/
+
+}
+header h1 {
+  padding: 40px 0px 20px 0px;
+}
+header h2 {
+  font-style: italic;
+  /*Configuración del subtítulo de la portada*/
+  font-weight: 400;
+}
+/**********************************************
+                   TARJETAS 
+ **********************************************/
+
+main article {
+  width: 70%;
+  /*Ancho de cada tarjeta respecto a la pantalla*/
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 40px;
+  /*Espacio entre tarjeta y tarjeta*/
+  background-color: white;
+  /*Color de fondo de la tarjeta*/
+  padding: 40px 40px 40px 40px;
+  /*Separación del contenido con el borde de la tarjeta (superior derecha inferior izquierda)*/
+  box-shadow: 0px 4px 2px rgba(204, 204, 204, 0.8);
+  /*Sombra de las tarjetas*/
+  border-radius: 3px;
+  /*Radio de las esquinas de las tarjetas*/
+
+}
+/**********************************************
+                   IMAGENES 
+ **********************************************/
+
+/*Éste código configura cómo se ven las imágenes. Puedes crear más clases poniendo un width proporcional. Por ejemplo para un "img.fourimage" sería 100% / 4 = 25% de with.*/
+
+img.oneimage {
+  width: 100%;
+}
+img.twoimage {
+  width: 49.5%;
+}
+img.threeimage {
+  width: 32.8%;
+}
+/**********************************************
+                   FOOTER 
+ **********************************************/
+
+footer {
+  font-size: 0.8em;
+  /*Tamaño de letra del texto del pié de la página*/
+  width: 100%;
+  text-align: center;
+  padding: 0px 0px 40px 0px;
+}
+/**********************************************
+                   BOTONES 
+ **********************************************/
+
+/*Aquí puedes cambiar cómo se muestran los botones*/
+
+button {
+  padding: 10px 30px 10px 30px;
+  /*Tamaño del botón*/
+  color: white;
+  /*Color del texto en los botones*/
+  background-color: #e74c3c;
+  /*Color de fondo en los botones*/
+  border-radius: 3px;
+}
+button:hover {
+  padding: 10px 30px 10px 30px;
+  color: white;
+  /*Color del texto en los botones al pasar el ratón por encima*/
+  background-color: #ed7669;
+  /*Color de fondo en los botones al pasar el ratón por encima*/
+
+}
+/*Ésta es la configuración de las secciones en las que se muestra una pequeña nota*/
+
+.note {
+  font-weight: 400;
+  font-size: 0.8rem;
+  color: #bfbfbf;
+  letter-spacing: 0px;
+}
+blockquote {
+  font-style: italic;
+  color: gray;
+  border-left: 10px solid;
+  padding-left: 5px;
+}
+blockquote p {
+  font-size: 1.4rem;
+}
+input {
+  border: 1px solid #f2b4ae;
+  background-color: #f2dfdf;
+}
+hr {
+  border-bottom: 1px solid #909090;
+  margin: 50px 0px;
+}
+/**********************************************
+                   OTROS 
+ **********************************************/
+
+.oculto {
+  display: none !important;
+  visibility: hidden;
+}
+.invisible {
+  visibility: hidden;
+}
+.enblanco {
+  color: white;
+}
+.toleft {
+  float: left;
+}
+.toright {
+  float: right;
+}
+/**********************************************
+                   BREACKPOINTS 
+ **********************************************/
+
+@media only screen and (max-width: 1025px) {
+  /* TIPOGRAFIA */
+  
+  h1 {
+    font-size: 3.5rem;
+  }
+  h2 {
+    font-size: 1.8rem;
+    padding: 0px 0px 25px 0px;
+  }
+  h3 {
+    font-size: 1.3rem;
+    padding: 5px 0px 10px 0px;
+  }
+  ul ul,
+  ol ol {
+    margin: 0px 0px 0px 17.5px;
+  }
+  ul ul ul,
+  ol ol ol {
+    margin: 0px 0px 0px 17.5px;
+  }
+  /* HEADER */
+  
+  header {
+    height: 40%;
+    margin-bottom: 20px;
+  }
+  /* TARJETAS */
+  
+  main article {
+    width: 85%;
+    margin-bottom: 30px;
+    padding: 35px 25px 35px 25px;
+  }
+  /* IMAGENES */
+  
+  img.threeimage {
+    width: 49%;
+  }
+}
+@media only screen and (max-width: 500px) {
+  /* TIPOGRAFIA */
+  
+  h1 {
+    font-size: 2rem;
+  }
+  h2 {
+    font-size: 1.6rem;
+    padding: 0px 0px 20px 0px;
+  }
+  h3 {
+    font-size: 1.3rem;
+    padding: 3px 0px 7px 0px;
+  }
+  ul ul,
+  ol ol {
+    margin: 0px 0px 0px 15px;
+  }
+  ul ul ul,
+  ol ol ol {
+    margin: 0px 0px 0px 15px;
+  }
+  /* HEADER */
+  
+  header {
+    height: 30%;
+    margin-bottom: 15px;
+  }
+  header h1 {
+    text-align: center;
+    padding: 30px 0px 10px 0px;
+  }
+  /* TARJETAS */
+  
+  main article {
+    width: 87%;
+    margin-bottom: 20px;
+    padding: 25px 20px;
+  }
+  /* IMAGENES */
+  
+  article img {
+    width: 100%;
+  }
+}

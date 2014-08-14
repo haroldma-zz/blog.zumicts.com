@@ -1,0 +1,23 @@
+/*
+DISEÑADOR WEB
+	 Diseñador web: Iván Barcia
+	 Sitio web: www.ivanbarcia.eu
+	 Contacto: contacto@ivanbarcia.eu
+	 Hecho en: Galicia, España
+	 
+INFORMACIÓN DE LA PÁGINA
+	Tema: Edictum
+	Versión: 1.0
+	Plataforma: GHOST
+*/
+
+
+
+
+
+/*No escribas ni modifiques aquí código CSS. Escríbelo en "custom.css"*/
+/* Do not write or modify CSS code here. Write it in "custom.css" */
+
+@import url(style.css);
+@import url(style-cms.css);
+@import url(custom.css);

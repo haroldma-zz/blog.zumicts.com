@@ -1,0 +1,175 @@
+
+/******************************************
+                BASICO
+*******************************************/
+
+*:hover {
+  transition: all 0.3s ease;
+}
+article img {
+  width: 100%;
+}
+.pagination {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.header-wp {
+  position: relative;
+  top: 0px;
+  margin-top: -32px;
+}
+/******************************************
+                HEADER
+*******************************************/
+
+header a {
+  color: #fff;
+}
+
+header a:hover {
+  color: #ed7669;
+}
+.post-logo {
+  padding: 30px 0px;
+  width: 100%;
+  text-align: center;
+}
+.post-logo img {
+  min-height: 50px;
+  /*Tamaño mínimo del logo*/
+  max-height: 200px;
+  /*Tamaño máximo del logo*/
+
+}
+.post-logo img:hover {
+  cursor: pointer;
+}
+/*2.1 Media Queries 1*/
+
+@media only screen and (max-width: 1025px) {
+  .post-logo {
+    padding: 25px 0px;
+  }
+  .post-logo img {
+    max-height: 150px;
+  }
+}
+/*2.1 Media Queries 2*/
+
+@media only screen and (max-width: 500px) {
+  .post-logo {
+    padding: 20px 0px;
+  }
+  .post-logo img {
+    max-height: 100px;
+  }
+}
+
+.post-header {
+  padding: 0px 0px 30px 0px;
+}
+.post-header h1 {
+  font-size: 3em;
+  /*Tamaño del título del post*/
+
+}
+/*3.1 Media Queries 1*/
+
+@media only screen and (max-width: 1025px) {
+  .post-header {
+    padding: 0px 0px 25px 0px;
+  }
+  .post-header h1 {
+    font-size: 2.5em;
+  }
+}
+/*3.2 Media Queries 2*/
+
+@media only screen and (max-width: 500px) {
+  .post-header {
+    padding: 0px 0px 20px 0px;
+  }
+  .post-header h1 {
+    font-size: 2em;
+  }
+}
+
+
+/******************************************
+                FOOTER
+*******************************************/
+
+.post-footer {
+  width: 30%;
+  /*Ancho de los datos del autor del post*/
+  margin: 0px auto;
+  padding: 40px 0px 0px 0px;
+}
+.post-footer p {
+  text-align: center;
+}
+.author img {
+  height: 100px;
+  /*Tamaño de la imagen de perfíl del autor*/
+  width: auto;
+}
+
+.author-wp {
+  margin-top: 30px;
+}
+
+h4 {
+  font-size: 1.5em;
+  /*Tamaño de letra del nombre del autor del post*/
+  font-weight: 400;
+  /*Grosor de letra del nombre del autor del post*/
+  padding: 0px 0px 0px 0px;
+  text-align: center;
+  font-style: italic;
+}
+/*4.1 Media Queries 1*/
+
+@media only screen and (max-width: 1025px) {
+  .post-footer {
+    width: 60%;
+    margin: 0px auto;
+  }
+  h4 {
+    font-size: 1.5em;
+    padding: 30px 0px 0px 0px;
+  }
+}
+/*4.2 Media Queries 2*/
+
+@media only screen and (max-width: 500px) {
+  .post-footer {
+    width: 90%;
+    margin: 0px auto;
+  }
+  h4 {
+    font-size: 1.5em;
+    padding: 30px 0px 0px 0px;
+  }
+}
+.authorimage {
+  border-radius: 50%;
+}
+
+
+
+/******************************************
+                PAGINACION
+*******************************************/
+
+.paginas {
+  text-align: center;
+}
+
+  .pagination span, .pagination a {
+      background-color: #fff;
+      box-shadow: 0px 4px 2px rgba(204, 204, 204, 0.8);
+      border-radius: 3px;
+      padding: 5px 10px;
+      margin: 0px 5px;
+}
